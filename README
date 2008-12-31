@@ -1,0 +1,22 @@
+== Description ==
+
+JSpeedStreamer is a proxy to speed up streaming media over HTTP by using multiple parallel threads for a single download. It differs from a download manager in that it delivers the data in order so that the resulting stream can be played through MPlayer, VLC or any other media player that can stream over HTTP.
+
+JSpeedStreamer receives a HTTP request and then divides up that request into segments, each segment is assigned to a downloading thread and is downloaded using the HTTP Range header. The threads download their data into a circular buffer and the data is delivered to the proxy client in order.
+
+== Example Usage ==
+
+Open proxy on default port 9050:
+java -jar JSpeedStreamer.jar 
+
+== Commandline Options ==
+
+-port     - what port # to listen on
+-buffer   - size in bytes of the circular buffer used to buffer downloaded data
+-maxseg   - maximum segment size in bytes for a downloading thread
+-minseg   - minimum segment size in bytes for a downloading thread
+-threads  - number of parallel downloading threads to use
+
+== Implementation Notes ==
+
+I'm very rusty with Java at this point so much of this implementation is out of touch with current practices. However I had fun working on it and instead of using many external libraries I implemented a lot of the slightly lower level code myself (ex. specialized circular buffer and HTTP parsing.)
