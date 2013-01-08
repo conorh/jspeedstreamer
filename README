@@ -20,3 +20,7 @@ java -jar JSpeedStreamer.jar
 == Implementation Notes ==
 
 I'm very rusty with Java at this point so much of this implementation is out of touch with current practices. However I had fun working on it and instead of using many external libraries I implemented a lot of the slightly lower level code myself (ex. specialized circular buffer and HTTP parsing.)
+
+== License
+
+See LICENSE file in this directory
