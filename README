@@ -7,7 +7,12 @@ JSpeedStreamer receives a HTTP request and then divides up that request into seg
 == Example Usage ==
 
 Open proxy on default port 9050:
-java -jar JSpeedStreamer.jar 
+`java -jar JSpeedStreamer.jar`
+
+* Open your HTTP-enabled media player (such as VLC).
+* In the network settings for your player, set the proxy to 127.0.0.1 port 9050.
+* In your media player, enter the URL for the desired video to stream like normal.
+* You should see some console output where you launched JSpeedStreamer to indicate that work is being done.
 
 == Commandline Options ==
 
